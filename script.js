@@ -13,3 +13,15 @@ function changeColor(x){
         if(x==6) x=1;
         changeColor(x);
     }
+$(document).keydown(function(e) {
+    if (e.which == '37') { //left arrow key
+        $(".vertical-center").finish().animate({
+            left: "+=50"
+        });
+    }
+    if(e.which=='39'){
+        $(".vertical-center").finish().animate({
+            right: "-=50"
+        });
+    }
+})
